@@ -26,19 +26,23 @@ Obstacle 스크립트를 만들어서
 */ 
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
-    public bool obsOn = false;
+    public Text scoreText;
 
-
+    public bool obsOn = false; // 장애물 밟음
+    private int score = 0; // 점수
 
     // Start는 MonoBehaviour가 생성된 후 Update의 첫 번째 실행 전에 한 번 호출됩니다.
     void Start()
     {
-        speed = 300;
+        scoreText = GetComponent<Text>();
+        scoreText.text = "Score : 0";
+        speed = 1000;
         rb = GetComponent<Rigidbody>();
         // GetComponent<T>() : 게임 오브젝트에 붙어있는 컴포넌트를 가져오는 기능
         // T : Type
@@ -61,7 +65,7 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, 0, vertical);
 
         if(obsOn == true) {
-            rb.AddForce((movement * -500f) * Time.deltaTime);
+            rb.AddForce((movement * -100f) * Time.deltaTime);
             obsOn = false;
         }
     
@@ -78,6 +82,10 @@ public class PlayerController : MonoBehaviour
 
         if(other.gameObject.CompareTag("obstacle")) {
             Debug.Log("장애물 밟음!");
+
+            score++;
+            scoreText.text = $"Score = {score * 10}";
+
             obsOn = true;
             other.gameObject.SetActive(false);
         }
