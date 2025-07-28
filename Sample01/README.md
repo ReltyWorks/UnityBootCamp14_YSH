@@ -7,6 +7,7 @@ UnityBootCamp14_YSH/Sample01/Assets/Scripts
 ## 유니티 기초 2일차
 UnityBootCamp14_YSH/Sample01/Assets/Scripts
 /2. Sample2
+
 UnityBootCamp14_YSH/Sample01/Assets/Scripts
 /3. Sample3
 
