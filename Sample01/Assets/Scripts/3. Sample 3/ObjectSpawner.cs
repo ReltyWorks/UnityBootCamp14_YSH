@@ -7,7 +7,7 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject checkSphere;
     public Text scoreText;
 
-    public int score = 0;
+    static public int score = 0;
 
     float spawnTime = 2.0f;
     float time = 0.0f;
@@ -21,6 +21,7 @@ public class ObjectSpawner : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
+        scoreText.text = $"Score : {score * 10}";
 
         if (time > spawnTime) {
             GameObject go = Instantiate(objectPrefab);
@@ -29,7 +30,6 @@ public class ObjectSpawner : MonoBehaviour
             
             checkSphere = GameObject.Find("Sphere");
             score++;
-            scoreText.text = $"Score : {score * 10}";
         }
     }
 }

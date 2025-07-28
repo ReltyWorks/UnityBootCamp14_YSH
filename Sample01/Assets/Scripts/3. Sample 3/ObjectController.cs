@@ -33,6 +33,7 @@ public class ObjectController : MonoBehaviour
 
         if (d < obj_r1 + obj_r2) { // 이 계산을 하느니 리지드바디를 쓰는게 낫지만,
             Destroy(gameObject); // 연구용으로 만들어봄
+            ObjectSpawner.score--;
         } // 이 기믹을 꼭 확인하고 학습해놔야함
 
 
