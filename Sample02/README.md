@@ -1,6 +1,4 @@
-# 유니티 스크립트 예제
-Unity Bootcamp 14th Projects
+## 유니티 기초 3일차
+UnityBootCamp14_YSH/Sample02/Assets/Scripts/Life Cycle/
 
-## 유니티의 생명주기
-***
-> 유니티에서는 프로그램의 실행부터 종료까지의 작업 영역을 함수로 제공합니다.
+(오전) 이벤트의 라이프 사이클, 이론과 테스트
