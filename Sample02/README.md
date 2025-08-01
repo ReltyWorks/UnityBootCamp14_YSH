@@ -18,3 +18,8 @@ Assets/Scripts/Input Scenes/
 Assets/Scripts/Unity Input/
 
 (오후) InputSystem 정리
+
+## 유니티 기초 0801
+Assets/Scripts/Unity Movement/
+
+(오전) Mathf 정리
