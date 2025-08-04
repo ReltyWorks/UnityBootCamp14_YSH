@@ -23,3 +23,8 @@ Assets/Scripts/Unity Input/
 Assets/Scripts/Unity Movement/
 
 (오전) Mathf 정리
+
+## 유니티 기초 0801
+Assets/Scripts/Leave Early/
+
+(오후조퇴) Rigidbody 정리
