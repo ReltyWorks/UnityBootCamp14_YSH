@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour {
     }
 
     private void Update() {
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.up * speed * Time.deltaTime;
     }
 
     IEnumerator IEBulletReturn() {
@@ -33,11 +33,12 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
 
-        // 부딪힌 대상이 Enemy 태그를 가지고ㅗ 있는 오브제[ㄱ트일 경우
+        // 부딪힌 대상이 Enemy 태그를 가지고 있는 오브젝트일 경우
         // 데미지를 입힙니다. 와 같은 데미지 관련 코드 작성
 
         // 이펙트 연출 (파티클)
-        if (effect_prefab != null) Instantiate(effect_prefab, transform.position, Quaternion.identity);
+        if (effect_prefab != null && other.gameObject.CompareTag("Enemy")) Instantiate(effect_prefab, transform.position, Quaternion.identity);
+
 
         pool.BulletReturn(gameObject);
     }

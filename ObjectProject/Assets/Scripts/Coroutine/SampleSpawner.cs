@@ -13,7 +13,7 @@ public class SampleSpawner : MonoBehaviour
         if (sample == null) { // 3) 탐색 결과가 없으면
             GameObject go = new GameObject("Sample");
             // 4) 게임 오브젝트 클래스 'go'를 만들어서 "Sample"을 새로 만들어서 정보를 넣음.
-            go.AddComponent<Sample>(); //
+            //go.AddComponent<Sample>(); //
         } else {
             Debug.Log("이미 존재합니다.");
         }
