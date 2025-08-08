@@ -21,7 +21,8 @@ public class MenuUI : MonoBehaviour {
         SceneManager.LoadScene("SampleScene");
     }
     private void RuleView() {
-        // ruleUI.SetActive(true); // 컴포넌트에서 이미 구현함
+        // ruleUI.SetActive(true);
+        // 컴포넌트에서 OnClick으로 이미 구현함
     }
     private void GameExit() { // 전처리기 코드는 말 그대로 전(먼저)에 처리하라는 코드다
 #if UNITY_EDITOR // 전처리기 코드는 관례적으로 아래와 같이 들여쓰기를 처음부터 시작

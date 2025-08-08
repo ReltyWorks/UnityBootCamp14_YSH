@@ -4,6 +4,7 @@ using TMPro;
 public class TextMashProSample : MonoBehaviour {
     // TMP를 사용하는 UI 컴포넌트
     public TextMeshProUGUI textUI;
+    // 기존 레거시 텍스트 연결법과는 다르다!
 
     private void Start() {
         textUI.text = "<size=150%>안녕하살법!</size>\n<s>이 말 취소</s>";
