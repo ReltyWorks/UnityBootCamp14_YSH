@@ -1,0 +1,19 @@
+{
+    "quests": [
+        {
+            "quest_name": "시작이 반이다",
+            "reward": "exp +100",
+            "description": "시작이 반이 맞냐? 왜이렇게 힘드냐."
+        },
+        {
+            "quest_name": "중간만 해라",
+            "reward": "exp +150",
+            "description": "중간을 하는 것도 힘들긴 한데."
+        },
+        {
+            "quest_name": "끝까지 가자",
+            "reward": "exp +500",
+            "description": "가능하다면 말야.."
+        }
+    ]
+}
