@@ -26,6 +26,7 @@ public class FileManager : MonoBehaviour {
             string json = File.ReadAllText(editorPath);
             ScoreData Data = JsonUtility.FromJson<ScoreData>(json);
             best = Data.save;
+            SetBestText(best);
         };
 #else
         string exeFolder = Path.Combine(Application.dataPath, "../");
@@ -36,6 +37,7 @@ public class FileManager : MonoBehaviour {
             string json = File.ReadAllText(runtimePath);
             ScoreData Data = JsonUtility.FromJson<ScoreData>(json);
             best = Data.save;
+            SetBestText(best);
         };
 #endif
     }
@@ -49,16 +51,15 @@ public class FileManager : MonoBehaviour {
 
     public int GetBest() => best;
 
-    void Update() {
-        if (!player.activeSelf) {
+    public void GameOver() {
+        Debug.Log("»£√‚µ ");
 #if UNITY_EDITOR
-            ScoreData Data = new ScoreData();
-            Data.save = best;
-            string json = JsonUtility.ToJson(Data, true);
-            File.WriteAllText(editorPath, json);
+        ScoreData Data = new ScoreData();
+        Data.save = best;
+        string json = JsonUtility.ToJson(Data, true);
+        File.WriteAllText(editorPath, json);
 #else
 
 #endif
-        }
     }
 }

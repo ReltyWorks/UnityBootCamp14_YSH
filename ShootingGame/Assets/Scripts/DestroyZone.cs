@@ -2,6 +2,6 @@ using UnityEngine;
 
 public class DestroyZone : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
-        if (!other.CompareTag("DestroyZone")) Destroy(other.gameObject);
+        if (other.gameObject.layer != 7) Destroy(other.gameObject);
     }
 }

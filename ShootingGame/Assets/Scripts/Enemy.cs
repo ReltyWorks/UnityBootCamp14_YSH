@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour {
     public float speed = 5f;
@@ -21,8 +22,12 @@ public class Enemy : MonoBehaviour {
     void OnCollisionEnter(Collision other) {
         ScoreManager.Instance.SetScore(10);
         GameObject explosion = Instantiate(explosionFactory, transform.position, Quaternion.identity);
+        if (other.gameObject.layer != 7) Destroy(other.gameObject);
+        if (other.gameObject.layer == 8) {
+            FileManager.Instance.GameOver();
+            EnemyManager.Instance.GameOver();
+        }
         Destroy(gameObject);
-        if (other.gameObject.tag != "DestroyZone") Destroy(other.gameObject);
     }
 
     void PatternSetting() {

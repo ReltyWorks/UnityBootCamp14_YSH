@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
@@ -9,6 +10,12 @@ public class EnemyManager : MonoBehaviour {
     float createTime;
     float currentTime;
 
+    public static EnemyManager Instance = null;
+
+    private void Awake() {
+        if (Instance == null) Instance = this;
+    }
+
     void Update() {
         currentTime += Time.deltaTime;
 
@@ -19,5 +26,9 @@ public class EnemyManager : MonoBehaviour {
 
             createTime = Random.Range(minCT, maxCT);
         }
+    }
+
+    public void GameOver() {
+        Destroy(this.gameObject);
     }
 }

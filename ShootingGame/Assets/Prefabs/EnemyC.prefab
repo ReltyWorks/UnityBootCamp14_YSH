@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3390306272870746074}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane_GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3434187482986357018}
   - component: {fileID: 758510516241471578}
   - component: {fileID: 6683451698294583067}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 5395059650909734717}
   - component: {fileID: 967437684380573307}
   - component: {fileID: 966239721298794007}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prop1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1035951857070021836}
   - component: {fileID: 8474927051550473960}
   - component: {fileID: 6371442601642752116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prop1Blur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
